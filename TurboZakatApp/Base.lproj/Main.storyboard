@@ -258,6 +258,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7EO-y4-xlp" kind="show" identifier="goldWeightSegue" id="G4K-Co-uYb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the weight of your Gold" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kw-Gs-zEi">
                                 <rect key="frame" x="73" y="118" width="230" height="44"/>
