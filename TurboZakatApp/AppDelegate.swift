@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TurboZakatApp
 //
-//  Created by Muhammad Ali Lakhani on 2018-02-03.
+//  Created by Hamza Lakhani on 2018-02-03.
 //  Copyright © 2018 Hamza Lakhani. All rights reserved.
 //
 

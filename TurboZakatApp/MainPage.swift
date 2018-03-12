@@ -2,7 +2,7 @@
 //  MainPage.swift
 //  TurboZakatApp
 //
-//  Created by Muhammad Ali Lakhani on 2018-02-27.
+//  Created by Hamza Lakhani on 2018-02-27.
 //  Copyright © 2018 Hamza Lakhani. All rights reserved.
 //
 

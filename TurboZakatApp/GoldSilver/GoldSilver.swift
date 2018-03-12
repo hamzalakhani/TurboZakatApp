@@ -15,7 +15,6 @@ class GoldSilver: UIViewController, UITextFieldDelegate {
     
     //Gold calculation outlets
     
-    @IBOutlet weak var goldWeightField: UITextField!
     
     @IBOutlet weak var goldPurityField: UITextField!
     
