@@ -18,17 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD1-jz-f3f">
-                                <rect key="frame" x="56" y="452" width="264" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Quick Check">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="12h-N8-JXl" kind="show" id="dWQ-AO-1e8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-iw-lY8">
                                 <rect key="frame" x="56" y="510" width="264" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,12 +34,34 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="National-Zakat-Foundation-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="avK-74-UyQ">
-                                <rect key="frame" x="16" y="94" width="390" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="National-Zakat-Foundation-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="avK-74-UyQ">
+                                <rect key="frame" x="15" y="94" width="345" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UAc-RZ-IZi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="kiO-0c-WJZ"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YD1-jz-f3f">
+                                <rect key="frame" x="55" y="435" width="264" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="SPF-qL-pO4"/>
+                                </constraints>
+                                <state key="normal" title="Quick Check">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="12h-N8-JXl" kind="show" id="dWQ-AO-1e8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="avK-74-UyQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="EKW-So-eHB"/>
+                            <constraint firstItem="YD1-jz-f3f" firstAttribute="top" secondItem="avK-74-UyQ" secondAttribute="bottom" constant="241" id="eIV-fe-hAg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avK-74-UyQ" secondAttribute="trailing" constant="15" id="iUh-dp-bc3"/>
+                            <constraint firstItem="avK-74-UyQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="ppN-G6-o3n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8Jy-2e-xQH"/>
@@ -216,7 +227,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Weight &amp; Purity"/>
                                 <connections>
-                                    <segue destination="4fX-RD-pds" kind="show" id="YrQ-v2-4Qd"/>
+                                    <segue destination="4fX-RD-pds" kind="show" id="Kjk-vK-2W1"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-R5-Z1L">
@@ -259,6 +270,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="sendGold:" destination="4fX-RD-pds" eventType="touchUpInside" id="8XA-5j-kgM"/>
                                     <segue destination="7EO-y4-xlp" kind="show" identifier="goldWeightSegue" id="G4K-Co-uYb"/>
                                 </connections>
                             </button>
@@ -316,6 +328,7 @@
                                 </state>
                                 <connections>
                                     <action selector="calculateGoldWP:" destination="7EO-y4-xlp" eventType="touchUpInside" id="04t-h8-vnb"/>
+                                    <segue destination="qGe-wS-bge" kind="show" identifier="calculateSegue" id="6aT-dD-cYf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Amount due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-yP-KUB">
@@ -347,16 +360,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Amount due" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-cZ-LoH">
-                                <rect key="frame" x="120" y="161" width="134" height="21"/>
+                                <rect key="frame" x="120" y="164" width="134" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="weV-sc-EJ8">
-                                <rect key="frame" x="22" y="88" width="331" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tnB-dc-JmZ"/>
@@ -364,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeP-fy-aEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4810" y="-1972"/>
+            <point key="canvasLocation" x="4791" y="-1726"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UBT-l1-2oa">

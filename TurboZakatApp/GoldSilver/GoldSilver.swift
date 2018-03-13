@@ -8,8 +8,9 @@
 
 import UIKit
 
-class GoldSilver: UIViewController, UITextFieldDelegate {
-    var goldWeight =   Double()
+class GoldSilver: UIViewController {
+    
+    var goldWeightSent =  Double()
     var goldPurity =   Double()
     var currentGoldValue = Double()
     
@@ -22,18 +23,16 @@ class GoldSilver: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculateGoldWP(_ sender: Any) {
         if (( goldPurityField.text) != nil){
-        goldWeight = Double(goldWeightField.text!)!
         goldPurity = Double(goldPurityField.text!)!
         currentGoldValue = 53.17
         
-        let value  = (goldPurity/24 * 100) * goldWeight * currentGoldValue
+        let value  = (goldPurity/24 * 100) * goldWeightSent * currentGoldValue
 
         totalAmount.text = String(format: "%.2f", value)
     
         }else {
             
                 goldPurityField.text = ""
-                goldWeightField.text = ""
                 totalAmount.text = ""
                 }
     }
@@ -47,7 +46,6 @@ class GoldSilver: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        goldWeightField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

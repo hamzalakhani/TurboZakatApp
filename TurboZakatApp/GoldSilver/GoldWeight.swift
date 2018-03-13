@@ -13,18 +13,31 @@ class GoldWeight: UIViewController {
     var goldWeight = Double()
     
     @IBOutlet weak var goldWeightField: UITextField!
+    @IBAction func sendGold(_ sender: Any) {
+        
+        if goldWeightField.text != ""
+        {
+            performSegue(withIdentifier: "goldWeightSegue", sender: self)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         
         
         
         super.viewDidLoad()
-        goldWeight = Double(goldWeightField.text!)!
 
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+       
+        let gSC = segue.destination as? GoldSilver
+        gSC?.goldWeightSent =     Double(goldWeightField.text!)!
+
+        
     }
     
 
