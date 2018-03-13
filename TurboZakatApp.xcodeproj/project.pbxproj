@@ -16,6 +16,7 @@
 		1384467A20266F0400751AE5 /* TurboZakatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1384467920266F0400751AE5 /* TurboZakatAppUITests.swift */; };
 		138E666E204E055200058386 /* GoldSilver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E666D204E055200058386 /* GoldSilver.swift */; };
 		138E66702057380600058386 /* GoldWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E666F2057380600058386 /* GoldWeight.swift */; };
+		138E6675205763DD00058386 /* SummaryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E6674205763DD00058386 /* SummaryPage.swift */; };
 		13D25A492044AAE200E0A12E /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D25A482044AAE200E0A12E /* StateMachine.swift */; };
 		13D25A4C2046151A00E0A12E /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D25A4B2046151A00E0A12E /* MainPage.swift */; };
 		13D25A50204618FC00E0A12E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D25A4F204618FC00E0A12E /* ViewModel.swift */; };
@@ -57,6 +58,8 @@
 		1384467B20266F0400751AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		138E666D204E055200058386 /* GoldSilver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldSilver.swift; sourceTree = "<group>"; };
 		138E666F2057380600058386 /* GoldWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldWeight.swift; sourceTree = "<group>"; };
+		138E6674205763DD00058386 /* SummaryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPage.swift; sourceTree = "<group>"; };
+		138E667620576AA800058386 /* TurboZakatApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TurboZakatApp.entitlements; sourceTree = "<group>"; };
 		13D25A482044AAE200E0A12E /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
 		13D25A4B2046151A00E0A12E /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		13D25A4F204618FC00E0A12E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -113,9 +116,11 @@
 		1384465820266F0400751AE5 /* TurboZakatApp */ = {
 			isa = PBXGroup;
 			children = (
+				138E667620576AA800058386 /* TurboZakatApp.entitlements */,
 				1384465920266F0400751AE5 /* AppDelegate.swift */,
 				138E66732057385E00058386 /* SelectAsset */,
 				13D25A4B2046151A00E0A12E /* MainPage.swift */,
+				138E6674205763DD00058386 /* SummaryPage.swift */,
 				138E66722057383400058386 /* GoldSilver */,
 				13D25A4A2044B35900E0A12E /* StateMachine */,
 				1384465D20266F0400751AE5 /* Main.storyboard */,
@@ -242,6 +247,11 @@
 					1384465520266F0400751AE5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					1384466920266F0400751AE5 = {
 						CreatedOnToolsVersion = 9.1;
@@ -309,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13D25A5220461A0700E0A12E /* Model.swift in Sources */,
+				138E6675205763DD00058386 /* SummaryPage.swift in Sources */,
 				1384465A20266F0400751AE5 /* AppDelegate.swift in Sources */,
 				130D445120364908002CE0BB /* SelectAsset.swift in Sources */,
 				13D25A492044AAE200E0A12E /* StateMachine.swift in Sources */,
@@ -482,11 +493,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TurboZakatApp/TurboZakatApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BHA7KMB9T;
 				INFOPLIST_FILE = TurboZakatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.TurboZakatApp.TurboZakatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.TurboZakat.TurboZakat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,11 +509,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TurboZakatApp/TurboZakatApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BHA7KMB9T;
 				INFOPLIST_FILE = TurboZakatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.TurboZakatApp.TurboZakatApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.TurboZakat.TurboZakat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
